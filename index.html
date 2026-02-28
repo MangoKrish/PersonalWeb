@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akshay Krishna Sirigana | CS @ McMaster</title>
+  <meta name="description" content="Akshay Krishna Sirigana - Computer Science Co-op student at McMaster University. Passionate about Software Engineering, Robotics, and NLP.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=VT323&family=Courier+Prime:wght@400;700&family=Caveat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="decker-window">
+
+    <!-- Title Bar -->
+    <div class="title-bar">
+      <div class="title-bar-buttons">
+        <span class="win-btn win-close"></span>
+        <span class="win-btn win-min"></span>
+        <span class="win-btn win-max"></span>
+      </div>
+      <span class="title-bar-text">portfolio.deck &mdash; Akshay Krishna Sirigana</span>
+      <button class="theme-toggle" id="themeToggle" title="Toggle light/dark theme">
+        <span class="toggle-icon" id="toggleIcon">&#9788;</span>
+      </button>
+    </div>
+
+    <!-- Menu Bar -->
+    <div class="menu-bar">
+      <span class="menu-item menu-app">&#9824; Deck</span>
+      <span class="menu-item" data-card="home">Home</span>
+      <span class="menu-item" data-card="about">About</span>
+      <span class="menu-item" data-card="skills">Skills</span>
+      <span class="menu-item" data-card="project">Projects</span>
+      <span class="menu-item" data-card="interests">More</span>
+      <span class="menu-item" data-card="contact">Contact</span>
+      <a href="Resume_Krish.pdf" target="_blank" rel="noopener noreferrer" class="menu-item menu-resume">&#128196; Resume</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="decker-body">
+
+      <div class="canvas-area">
+
+        <!-- ======================== HOME ======================== -->
+        <div class="card active" id="card-home">
+          <div class="card-content home-card">
+            <div class="home-scene">
+              <div class="desk-scene">
+                <div class="desk-monitor">
+                  <div class="monitor-screen">
+                    <span class="screen-line" id="typedLine"></span>
+                    <span class="screen-cursor">_</span>
+                  </div>
+                  <div class="monitor-stand"></div>
+                </div>
+                <div class="desk-plant">
+                  <div class="plant-pot"></div>
+                  <div class="plant-stem"></div>
+                  <div class="plant-leaf plant-leaf-1"></div>
+                  <div class="plant-leaf plant-leaf-2"></div>
+                  <div class="plant-leaf plant-leaf-3"></div>
+                </div>
+                <div class="desk-coffee">
+                  <div class="coffee-steam">~</div>
+                </div>
+                <div class="desk-surface"></div>
+              </div>
+
+              <div class="home-text">
+                <div class="tape tape-pink tape-tilt-left"></div>
+                <h1 class="title-handwritten">Akshay Krishna</h1>
+                <h1 class="title-pixel">Sirigana</h1>
+                <div class="torn-edge"></div>
+                <p class="subtitle-typed">BASc Computer Science Co-op</p>
+                <p class="school-stamp">
+                  <span class="stamp-border">McMaster University</span>
+                </p>
+                <div class="spacer-sm"></div>
+                <div class="tagline-sticker">
+                  <span>Software Engineering</span>
+                  <span class="sticker-dot">&#9679;</span>
+                  <span>Robotics</span>
+                  <span class="sticker-dot">&#9679;</span>
+                  <span>NLP</span>
+                </div>
+                <div class="spacer-sm"></div>
+                <div class="status-postit">
+                  <span class="blink-dot"></span>
+                  Open to Co-op Opportunities
+                </div>
+              </div>
+            </div>
+            <div class="card-footer-hint">
+              use menu or &#9664; &#9654; to flip cards
+            </div>
+          </div>
+        </div>
+
+        <!-- ======================== ABOUT ======================== -->
+        <div class="card" id="card-about">
+          <div class="card-content">
+            <div class="section-heading">
+              <div class="tape tape-blue tape-tilt-right"></div>
+              <h2 class="card-title">About Me</h2>
+              <div class="heading-underline"></div>
+            </div>
+            <div class="about-layout">
+              <div class="about-text notebook-lines">
+                <p>I'm a Computer Science Co-op student at <strong>McMaster University</strong>, driven by a deep curiosity for how technology can solve real-world problems.</p>
+                <p>My work spans full-stack development, AI/ML integration, and creating systems that make a meaningful impact.</p>
+                <p class="handwritten-note">&ldquo;Currently exploring Software Engineering, Robotics, and NLP.&rdquo;</p>
+              </div>
+              <div class="about-sidebar">
+                <div class="polaroid-card">
+                  <div class="polaroid-content">
+                    <div class="detail-row"><span class="detail-label">&#9670; University</span><span class="detail-value">McMaster</span></div>
+                    <div class="detail-row"><span class="detail-label">&#9670; Program</span><span class="detail-value">BASc CS Co-op</span></div>
+                    <div class="detail-row"><span class="detail-label">&#9670; Focus</span><span class="detail-value">SE, Robotics, NLP</span></div>
+                  </div>
+                  <div class="polaroid-caption handwritten">the basics &#10084;</div>
+                </div>
+                <div class="strength-badges">
+                  <span class="badge badge-coral">Full-Stack Dev</span>
+                  <span class="badge badge-sky">AI/ML</span>
+                  <span class="badge badge-amber">Problem Solving</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ======================== SKILLS ======================== -->
+        <div class="card" id="card-skills">
+          <div class="card-content">
+            <div class="section-heading">
+              <div class="tape tape-yellow tape-tilt-left"></div>
+              <h2 class="card-title">Technical Skills</h2>
+              <div class="heading-underline"></div>
+            </div>
+            <div class="skills-board">
+              <div class="skill-column">
+                <h3 class="skill-column-title">&#9997; Languages</h3>
+                <div class="sticker-wall">
+                  <span class="sticker sticker-lg">Python</span>
+                  <span class="sticker">Java</span>
+                  <span class="sticker">C</span>
+                  <span class="sticker">C#</span>
+                  <span class="sticker sticker-lg">HTML/CSS</span>
+                  <span class="sticker">PHP</span>
+                  <span class="sticker">SQL</span>
+                  <span class="sticker">Linux</span>
+                </div>
+              </div>
+              <div class="skill-column">
+                <h3 class="skill-column-title">&#9881; Frameworks</h3>
+                <div class="sticker-wall">
+                  <span class="sticker sticker-lg">React / Next.js</span>
+                  <span class="sticker">Tailwind CSS</span>
+                  <span class="sticker">Three.js</span>
+                  <span class="sticker">FastAPI</span>
+                  <span class="sticker">Framer Motion</span>
+                  <span class="sticker">Unity</span>
+                </div>
+              </div>
+              <div class="skill-column">
+                <h3 class="skill-column-title">&#9733; AI &amp; Tools</h3>
+                <div class="sticker-wall">
+                  <span class="sticker">Gemini API</span>
+                  <span class="sticker">Semantic Embeddings</span>
+                  <span class="sticker">NLP</span>
+                  <span class="sticker sticker-lg">Git / GitHub</span>
+                  <span class="sticker">VS Code</span>
+                  <span class="sticker">Vercel</span>
+                  <span class="sticker">Arduino</span>
+                  <span class="sticker">Google Cloud</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ======================== PROJECTS ======================== -->
+        <div class="card" id="card-project">
+          <div class="card-content">
+            <div class="section-heading">
+              <div class="tape tape-coral tape-tilt-right"></div>
+              <h2 class="card-title">Projects</h2>
+              <div class="heading-underline"></div>
+            </div>
+
+            <!-- Project Tabs -->
+            <div class="project-tabs">
+              <button class="project-tab active" data-project="argus">Argus</button>
+              <button class="project-tab" data-project="neondrift">NeonDrift</button>
+              <button class="project-tab" data-project="tejimola">Tejimola</button>
+            </div>
+
+            <!-- PROJECT: ARGUS -->
+            <div class="project-postcard project-panel active" id="project-argus">
+              <div class="postcard-header">
+                <div class="postmark">
+                  <div class="postmark-circle">
+                    <span>MAC-A-THON</span>
+                    <span>2026</span>
+                  </div>
+                </div>
+                <div class="postcard-title-area">
+                  <h3 class="project-name-big">ARGUS</h3>
+                  <p class="project-subtitle">Government Intelligence Platform</p>
+                </div>
+                <div class="postcard-stamp">
+                  <span>GDG</span>
+                  <span class="stamp-val">McMaster</span>
+                </div>
+              </div>
+
+              <p class="project-quote handwritten">&ldquo;Know what governments need before they post the RFP&rdquo;</p>
+
+              <div class="metrics-strip">
+                <div class="metric-badge"><span class="metric-num">&gt;85%</span><span class="metric-lbl">Accuracy</span></div>
+                <div class="metric-badge"><span class="metric-num">&lt;3s</span><span class="metric-lbl">Response</span></div>
+                <div class="metric-badge"><span class="metric-num">Live</span><span class="metric-lbl">Signals</span></div>
+                <div class="metric-badge"><span class="metric-num">Global</span><span class="metric-lbl">Coverage</span></div>
+              </div>
+
+              <div class="project-inner">
+                <div class="project-desc">
+                  <p>AI-powered platform that monitors government procurement signals in real-time, matches them to startup capabilities, and generates personalized outreach.</p>
+                  <div class="flow-pipeline">
+                    <span class="pipe-step"><b>01</b> Describe</span>
+                    <span class="pipe-join">&#10230;</span>
+                    <span class="pipe-step"><b>02</b> Analyze</span>
+                    <span class="pipe-join">&#10230;</span>
+                    <span class="pipe-step"><b>03</b> Match</span>
+                    <span class="pipe-join">&#10230;</span>
+                    <span class="pipe-step"><b>04</b> Engage</span>
+                  </div>
+                </div>
+                <div class="project-stack-card">
+                  <div class="stack-row"><span class="stack-key">Frontend:</span> Next.js, React, Three.js, Tailwind, Framer Motion</div>
+                  <div class="stack-row"><span class="stack-key">Backend:</span> FastAPI, Python</div>
+                  <div class="stack-row"><span class="stack-key">AI/ML:</span> Gemini 2.5 Flash, Semantic Embeddings</div>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://argus-macathon.vercel.app/" target="_blank" rel="noopener noreferrer" class="deck-btn deck-btn-filled">&#9654; Live Demo</a>
+                <a href="https://github.com/dunura13/Argus" target="_blank" rel="noopener noreferrer" class="deck-btn">GitHub</a>
+                <a href="https://devpost.com/software/argus-uipa2c" target="_blank" rel="noopener noreferrer" class="deck-btn">Devpost</a>
+              </div>
+              <p class="team-credit handwritten">team of 4 &bull; McMaster, TMU &amp; UofT</p>
+            </div>
+
+            <!-- PROJECT: NEONDRIFT -->
+            <div class="project-postcard project-panel" id="project-neondrift">
+              <div class="postcard-header">
+                <div class="postmark">
+                  <div class="postmark-circle">
+                    <span>DELTAHACKS</span>
+                    <span>2026</span>
+                  </div>
+                </div>
+                <div class="postcard-title-area">
+                  <h3 class="project-name-big">NEONDRIFT</h3>
+                  <p class="project-subtitle">Browser-Based Arcade Runner</p>
+                </div>
+                <div class="postcard-stamp">
+                  <span>&#127918;</span>
+                  <span class="stamp-val">Game</span>
+                </div>
+              </div>
+
+              <p class="project-quote handwritten">&ldquo;Zero dependencies, pure adrenaline&rdquo;</p>
+
+              <div class="metrics-strip">
+                <div class="metric-badge"><span class="metric-num">60</span><span class="metric-lbl">FPS</span></div>
+                <div class="metric-badge"><span class="metric-num">0</span><span class="metric-lbl">Dependencies</span></div>
+                <div class="metric-badge"><span class="metric-num">PWA</span><span class="metric-lbl">Ready</span></div>
+                <div class="metric-badge"><span class="metric-num">Cross</span><span class="metric-lbl">Platform</span></div>
+              </div>
+
+              <div class="project-inner">
+                <div class="project-desc">
+                  <p>A high-octane browser-based arcade runner built with pure HTML5 Canvas and vanilla JavaScript. Features dynamic difficulty scaling, combo-based scoring, and powerups including shield, magnet, and slow-motion.</p>
+                  <div class="flow-pipeline">
+                    <span class="pipe-step"><b>01</b> Canvas Render</span>
+                    <span class="pipe-join">&#10230;</span>
+                    <span class="pipe-step"><b>02</b> Physics Loop</span>
+                    <span class="pipe-join">&#10230;</span>
+                    <span class="pipe-step"><b>03</b> Score &amp; Combo</span>
+                    <span class="pipe-join">&#10230;</span>
+                    <span class="pipe-step"><b>04</b> Powerups</span>
+                  </div>
+                </div>
+                <div class="project-stack-card">
+                  <div class="stack-row"><span class="stack-key">Engine:</span> HTML5 Canvas, Vanilla JavaScript</div>
+                  <div class="stack-row"><span class="stack-key">Features:</span> Dynamic difficulty, combo scoring</div>
+                  <div class="stack-row"><span class="stack-key">Powerups:</span> Shield, Magnet, Slow-mo</div>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://mangokrish.github.io/NeonDrift/" target="_blank" rel="noopener noreferrer" class="deck-btn deck-btn-filled">&#9654; Play Game</a>
+                <a href="https://github.com/MangoKrish/NeonDrift" target="_blank" rel="noopener noreferrer" class="deck-btn">GitHub</a>
+              </div>
+              <p class="team-credit handwritten">DeltaHacks XI &bull; January 2026</p>
+            </div>
+
+            <!-- PROJECT: TEJIMOLA -->
+            <div class="project-postcard project-panel" id="project-tejimola">
+              <div class="postcard-header">
+                <div class="postmark">
+                  <div class="postmark-circle">
+                    <span>NARRATIVE</span>
+                    <span>2026</span>
+                  </div>
+                </div>
+                <div class="postcard-title-area">
+                  <h3 class="project-name-big">TEJIMOLA</h3>
+                  <p class="project-subtitle">2D Narrative Adventure Game</p>
+                </div>
+                <div class="postcard-stamp">
+                  <span>&#127917;</span>
+                  <span class="stamp-val">Unity</span>
+                </div>
+              </div>
+
+              <p class="project-quote handwritten">&ldquo;A 90-minute journey through an Assamese folktale&rdquo;</p>
+
+              <div class="metrics-strip">
+                <div class="metric-badge"><span class="metric-num">90</span><span class="metric-lbl">Minutes</span></div>
+                <div class="metric-badge"><span class="metric-num">4</span><span class="metric-lbl">Acts</span></div>
+                <div class="metric-badge"><span class="metric-num">2.5D</span><span class="metric-lbl">World</span></div>
+                <div class="metric-badge"><span class="metric-num">AI</span><span class="metric-lbl">Assisted</span></div>
+              </div>
+
+              <div class="project-inner">
+                <div class="project-desc">
+                  <p>A narrative adventure game bringing an Assamese folktale to life across 4 acts: exploration, stealth, rhythm, and boss battle. Features event-driven systems, adaptive audio, JSON-driven dialogue, and a rhythm engine.</p>
+                  <div class="flow-pipeline">
+                    <span class="pipe-step"><b>01</b> Explore</span>
+                    <span class="pipe-join">&#10230;</span>
+                    <span class="pipe-step"><b>02</b> Stealth</span>
+                    <span class="pipe-join">&#10230;</span>
+                    <span class="pipe-step"><b>03</b> Rhythm</span>
+                    <span class="pipe-join">&#10230;</span>
+                    <span class="pipe-step"><b>04</b> Boss</span>
+                  </div>
+                </div>
+                <div class="project-stack-card">
+                  <div class="stack-row"><span class="stack-key">Engine:</span> Unity, C#</div>
+                  <div class="stack-row"><span class="stack-key">Systems:</span> Event-driven, adaptive audio, rhythm engine</div>
+                  <div class="stack-row"><span class="stack-key">AI:</span> Claude Code assisted development</div>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://github.com/MangoKrish/tejimola-blossom" target="_blank" rel="noopener noreferrer" class="deck-btn deck-btn-filled">&#9654; View Project</a>
+              </div>
+              <p class="team-credit handwritten">February 2026 &bull; AI-assisted development</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ======================== INTERESTS ======================== -->
+        <div class="card" id="card-interests">
+          <div class="card-content">
+            <div class="section-heading">
+              <div class="tape tape-pink tape-tilt-left"></div>
+              <h2 class="card-title">Interests &amp; Hobbies</h2>
+              <div class="heading-underline"></div>
+            </div>
+            <div class="interest-board">
+              <div class="interest-pin interest-wide">
+                <div class="pin-tack pin-red"></div>
+                <h3>&#128187; Software Engineering</h3>
+                <p>Crafting robust, scalable software solutions. System design, clean architecture, and full-stack development.</p>
+              </div>
+              <div class="interest-pin">
+                <div class="pin-tack pin-blue"></div>
+                <h3>&#9881; Robotics</h3>
+                <p>Bridging physical and digital worlds through intelligent robotic systems.</p>
+              </div>
+              <div class="interest-pin">
+                <div class="pin-tack pin-yellow"></div>
+                <h3>&#128172; NLP</h3>
+                <p>Exploring how machines understand and generate human language.</p>
+              </div>
+            </div>
+
+            <div class="divider-doodle">&#10049; &#10049; &#10049;</div>
+
+            <h3 class="sub-heading handwritten">beyond code...</h3>
+            <div class="hobby-tickets">
+              <a href="https://ratings.fide.com/profile/547078332" target="_blank" rel="noopener noreferrer" class="ticket ticket-link">
+                <div class="ticket-stub"></div>
+                <div class="ticket-body"><span class="ticket-icon">&#9822;</span><span class="ticket-label">Chess</span><span class="ticket-cta">Click here!</span></div>
+              </a>
+              <div class="ticket">
+                <div class="ticket-stub"></div>
+                <div class="ticket-body"><span class="ticket-icon">&#127992;</span><span class="ticket-label">Badminton</span></div>
+              </div>
+              <div class="ticket">
+                <div class="ticket-stub"></div>
+                <div class="ticket-body"><span class="ticket-icon">&#127925;</span><span class="ticket-label">Music</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ======================== CONTACT ======================== -->
+        <div class="card" id="card-contact">
+          <div class="card-content">
+            <div class="section-heading">
+              <div class="tape tape-blue tape-tilt-left"></div>
+              <h2 class="card-title">Get In Touch</h2>
+              <div class="heading-underline"></div>
+            </div>
+            <div class="contact-layout">
+              <div class="contact-letter">
+                <p>I'm actively looking for co-op and internship opportunities in Software Engineering, Robotics, and NLP.</p>
+                <p class="handwritten letter-signoff">Let's build something together!</p>
+                <p class="letter-sig">&mdash; Akshay</p>
+              </div>
+              <div class="contact-envelopes">
+                <a href="mailto:sirigana@mcmaster.ca" class="envelope-link">
+                  <span class="env-icon">&#9993;</span>
+                  <div><span class="env-label">Email</span><span class="env-value">sirigana@mcmaster.ca</span></div>
+                </a>
+                <a href="https://www.linkedin.com/in/akshay-krishna-sirigana-1b718a380/" target="_blank" rel="noopener noreferrer" class="envelope-link">
+                  <span class="env-icon">&#9741;</span>
+                  <div><span class="env-label">LinkedIn</span><span class="env-value">Akshay Krishna Sirigana</span></div>
+                </a>
+                <a href="https://github.com/MangoKrish" target="_blank" rel="noopener noreferrer" class="envelope-link">
+                  <span class="env-icon">&#128193;</span>
+                  <div><span class="env-label">GitHub</span><span class="env-value">MangoKrish</span></div>
+                </a>
+                <a href="Resume_Krish.pdf" target="_blank" rel="noopener noreferrer" class="envelope-link envelope-resume">
+                  <span class="env-icon">&#128196;</span>
+                  <div><span class="env-label">Resume</span><span class="env-value">Download PDF</span></div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /canvas-area -->
+
+      <!-- Right Sidebar: Sticker Sheet -->
+      <div class="sidebar-stickers">
+        <div class="sidebar-title">stickers</div>
+        <div class="sidebar-item sb-star">&#9733;</div>
+        <div class="sidebar-item sb-heart">&#10084;</div>
+        <div class="sidebar-item sb-bolt">&#9889;</div>
+        <div class="sidebar-item sb-flower">&#10048;</div>
+        <div class="sidebar-item sb-music">&#9835;</div>
+        <div class="sidebar-item sb-code">&lt;/&gt;</div>
+      </div>
+
+    </div><!-- /decker-body -->
+
+    <!-- Bottom Toolbar -->
+    <div class="bottom-bar">
+      <button class="bar-btn" data-card="prev">&#9664; prev</button>
+      <button class="bar-btn" data-card="next">next &#9654;</button>
+      <span class="bar-counter" id="cardCounter">1 / 6</span>
+      <span class="bar-sep">|</span>
+      <span class="bar-label">&#128206; portfolio.deck</span>
+      <span class="bar-timestamp" id="barTime"></span>
+    </div>
+
+  </div><!-- /decker-window -->
+
+  <script src="script.js"></script>
+</body>
+</html>
