@@ -1,478 +1,591 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="paper">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Akshay Krishna Sirigana | CS @ McMaster</title>
-  <meta name="description" content="Akshay Krishna Sirigana - Computer Science Co-op student at McMaster University. Passionate about Software Engineering, Robotics, and NLP.">
+  <title>Akshay Krishna Sirigana — Software · Robotics · NLP</title>
+  <meta name="description" content="Akshay Krishna Sirigana — Computer Science Co-op student at McMaster University building AI products end-to-end: local voice assistants, matching engines, extensions, and games.">
+  <meta property="og:title" content="Akshay Krishna Sirigana — Portfolio, Issue 01">
+  <meta property="og:description" content="Software engineer working across robotics, NLP, and the web. 10 projects, one magazine.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23E8380D'/%3E%3Ctext x='32' y='44' font-family='Arial Black,sans-serif' font-size='34' font-weight='900' fill='%23F7F4EE' text-anchor='middle'%3EAK%3C/text%3E%3C/svg%3E">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('aks-theme');
+        if (t !== 'ink' && t !== 'paper') {
+          t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'ink' : 'paper';
+        }
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) { /* default stands */ }
+      document.documentElement.classList.add('js');
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=VT323&family=Courier+Prime:wght@400;700&family=Caveat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="decker-window">
 
-    <!-- Title Bar -->
-    <div class="title-bar">
-      <div class="title-bar-buttons">
-        <span class="win-btn win-close"></span>
-        <span class="win-btn win-min"></span>
-        <span class="win-btn win-max"></span>
-      </div>
-      <span class="title-bar-text">portfolio.deck &mdash; Akshay Krishna Sirigana</span>
-      <button class="theme-toggle" id="themeToggle" title="Toggle light/dark theme">
-        <span class="toggle-icon" id="toggleIcon">&#9788;</span>
+  <a class="skip-link" href="#work">Skip to projects</a>
+
+  <!-- ============ RUNNING HEADER ============ -->
+  <header class="running-header" id="runningHeader" aria-label="Site header">
+    <a class="rh-wordmark" href="#top">A.K.S.</a>
+    <p class="rh-folio mono" id="folioIndicator">000 / 006 — MASTHEAD</p>
+    <div class="rh-actions">
+      <button class="theme-switch mono" id="themeToggle" type="button" role="switch" aria-checked="false" aria-label="Ink theme">
+        <span class="ts-opt ts-ink">INK</span><span class="ts-slash" aria-hidden="true">/</span><span class="ts-opt ts-paper">PAPER</span>
       </button>
+      <a class="rh-resume mono" href="Resume_Krish.pdf" target="_blank" rel="noopener noreferrer">RESUME&nbsp;↗</a>
+    </div>
+    <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+  </header>
+
+  <!-- ============ 000 MASTHEAD ============ -->
+  <section class="masthead" id="top" data-folio="000 / 006 — MASTHEAD">
+    <div class="mast-topbar mono">
+      <span>AKSHAY KRISHNA SIRIGANA</span>
+      <span class="mast-topbar-right">PORTFOLIO — ISSUE&nbsp;01&nbsp;&nbsp;·&nbsp;&nbsp;McMASTER BASc CS CO-OP</span>
     </div>
 
-    <!-- Menu Bar -->
-    <div class="menu-bar">
-      <span class="menu-item menu-app">&#9824; Deck</span>
-      <span class="menu-item" data-card="home">Home</span>
-      <span class="menu-item" data-card="about">About</span>
-      <span class="menu-item" data-card="skills">Skills</span>
-      <span class="menu-item" data-card="project">Projects</span>
-      <span class="menu-item" data-card="interests">More</span>
-      <span class="menu-item" data-card="contact">Contact</span>
-      <a href="Resume_Krish.pdf" target="_blank" rel="noopener noreferrer" class="menu-item menu-resume">&#128196; Resume</a>
+    <h1 class="mast-name" aria-label="Akshay Krishna Sirigana">
+      <span class="mast-line" aria-hidden="true">AKSHAY</span>
+      <span class="mast-line" aria-hidden="true">KRISHNA</span>
+    </h1>
+
+    <p class="mast-dek">Software engineer working across <em>robotics</em>, <em>NLP</em>, and the web — building AI products end-to-end.</p>
+
+    <div class="mast-meta mono">
+      <span>HAMILTON, ONTARIO</span>
+      <span class="mast-open"><span class="pulse-dot" aria-hidden="true"></span>OPEN TO CO-OP &amp; INTERNSHIPS</span>
+      <a href="Resume_Krish.pdf" target="_blank" rel="noopener noreferrer">RESUME&nbsp;↗</a>
     </div>
+    <p class="mast-facts mono">McMASTER '29&nbsp;&nbsp;·&nbsp;&nbsp;10 PROJECTS SHIPPED&nbsp;&nbsp;·&nbsp;&nbsp;PYTHON / REACT / FASTAPI&nbsp;&nbsp;·&nbsp;&nbsp;FIDE-RATED CHESS PLAYER</p>
 
-    <!-- Main Content -->
-    <div class="decker-body">
+    <p class="mast-scrollcue mono" aria-hidden="true">SCROLL ↓</p>
+  </section>
 
-      <div class="canvas-area">
+  <main>
 
-        <!-- ======================== HOME ======================== -->
-        <div class="card active" id="card-home">
-          <div class="card-content home-card">
-            <div class="home-scene">
-              <div class="desk-scene">
-                <div class="desk-monitor">
-                  <div class="monitor-screen">
-                    <span class="screen-line" id="typedLine"></span>
-                    <span class="screen-cursor">_</span>
-                  </div>
-                  <div class="monitor-stand"></div>
-                </div>
-                <div class="desk-plant">
-                  <div class="plant-pot"></div>
-                  <div class="plant-stem"></div>
-                  <div class="plant-leaf plant-leaf-1"></div>
-                  <div class="plant-leaf plant-leaf-2"></div>
-                  <div class="plant-leaf plant-leaf-3"></div>
-                </div>
-                <div class="desk-coffee">
-                  <div class="coffee-steam">~</div>
-                </div>
-                <div class="desk-surface"></div>
-              </div>
+    <!-- ============ 001 ABOUT ============ -->
+    <section class="section" id="about" data-folio="001 / 006 — THE LEDE">
+      <div class="kicker mono"><span>001 — THE LEDE</span><span>01 / 06</span></div>
+      <h2 class="headline reveal">Curious by <em>default.</em></h2>
 
-              <div class="home-text">
-                <div class="tape tape-pink tape-tilt-left"></div>
-                <h1 class="title-handwritten">Akshay Krishna</h1>
-                <h1 class="title-pixel">Sirigana</h1>
-                <div class="torn-edge"></div>
-                <p class="subtitle-typed">BASc Computer Science Co-op</p>
-                <p class="school-stamp">
-                  <span class="stamp-border">McMaster University</span>
-                </p>
-                <div class="spacer-sm"></div>
-                <div class="tagline-sticker">
-                  <span>Software Engineering</span>
-                  <span class="sticker-dot">&#9679;</span>
-                  <span>Robotics</span>
-                  <span class="sticker-dot">&#9679;</span>
-                  <span>NLP</span>
-                </div>
-                <div class="spacer-sm"></div>
-                <div class="status-postit">
-                  <span class="blink-dot"></span>
-                  Open to Co-op Opportunities
-                </div>
-              </div>
-            </div>
-            <div class="card-footer-hint">
-              use menu or &#9664; &#9654; to flip cards
-            </div>
-          </div>
+      <div class="about-grid">
+        <div class="about-body">
+          <p class="dropcap rise">I'm a Computer Science co-op student at McMaster University who likes building the whole thing — the model, the backend, the interface, and the deploy script. Most of what I make starts with a real person's problem: a freelancer rewriting the same proposal for the tenth time, a student memorizing ninety-four physics formulae, two people planning life across a ten-and-a-half-hour timezone gap.</p>
+          <p class="rise">A thread runs through my work: software should respect the person using it. That's why my projects keep turning out local-first, bring-your-own-key, and dependency-free — a voice assistant that never sends audio to a cloud, an extension whose API key never leaves your device, a matching engine that explains its recommendations in plain language instead of exposing raw scores.</p>
+          <p class="rise">Right now I'm exploring software engineering, robotics, and natural-language processing — and looking for a co-op team that ships.</p>
         </div>
+        <aside class="about-margin" aria-label="Quick facts">
+          <div class="margin-row mono"><span class="margin-key">UNIVERSITY</span><span>McMASTER — BASc CS (CO-OP), '25–'29</span></div>
+          <div class="margin-row mono"><span class="margin-key">FOCUS</span><span>SOFTWARE · ROBOTICS · NLP</span></div>
+          <div class="margin-row mono"><span class="margin-key">ETHOS</span><span>LOCAL-FIRST · ZERO-DEP · EXPLAINABLE</span></div>
+          <div class="margin-row mono"><span class="margin-key">STATUS</span><span>OPEN TO CO-OP &amp; INTERNSHIPS</span></div>
+          <p class="pull-quote">&ldquo;Build the whole thing. Then make it respect its user.&rdquo;</p>
+        </aside>
+      </div>
+    </section>
 
-        <!-- ======================== ABOUT ======================== -->
-        <div class="card" id="card-about">
-          <div class="card-content">
-            <div class="section-heading">
-              <div class="tape tape-blue tape-tilt-right"></div>
-              <h2 class="card-title">About Me</h2>
-              <div class="heading-underline"></div>
-            </div>
-            <div class="about-layout">
-              <div class="about-text notebook-lines">
-                <p>I'm a Computer Science Co-op student at <strong>McMaster University</strong>, driven by a deep curiosity for how technology can solve real-world problems.</p>
-                <p>My work spans full-stack development, AI/ML integration, and creating systems that make a meaningful impact.</p>
-                <p class="handwritten-note">&ldquo;Currently exploring Software Engineering, Robotics, and NLP.&rdquo;</p>
-              </div>
-              <div class="about-sidebar">
-                <div class="polaroid-card">
-                  <div class="polaroid-content">
-                    <div class="detail-row"><span class="detail-label">&#9670; University</span><span class="detail-value">McMaster</span></div>
-                    <div class="detail-row"><span class="detail-label">&#9670; Program</span><span class="detail-value">BASc CS Co-op</span></div>
-                    <div class="detail-row"><span class="detail-label">&#9670; Focus</span><span class="detail-value">SE, Robotics, NLP</span></div>
-                  </div>
-                  <div class="polaroid-caption handwritten">the basics &#10084;</div>
-                </div>
-                <div class="strength-badges">
-                  <span class="badge badge-coral">Full-Stack Dev</span>
-                  <span class="badge badge-sky">AI/ML</span>
-                  <span class="badge badge-amber">Problem Solving</span>
-                </div>
-              </div>
-            </div>
-          </div>
+    <!-- ============ 002 SELECTED WORK ============ -->
+    <section class="section" id="work" data-folio="002 / 006 — SELECTED WORK">
+      <div class="kicker mono"><span>002 — SELECTED WORK</span><span>02 / 06</span></div>
+      <h2 class="headline reveal">Things I've <em>shipped.</em></h2>
+
+      <div class="filter-bar">
+        <div class="filter-chips" role="group" aria-label="Filter projects">
+          <button class="chip mono" type="button" data-filter="all" aria-pressed="true">ALL <span class="chip-count"></span></button>
+          <button class="chip mono" type="button" data-filter="ai" aria-pressed="false">AI &amp; NLP <span class="chip-count"></span></button>
+          <button class="chip mono" type="button" data-filter="web" aria-pressed="false">WEB &amp; PRODUCT <span class="chip-count"></span></button>
+          <button class="chip mono" type="button" data-filter="games" aria-pressed="false">GAMES &amp; EDUCATION <span class="chip-count"></span></button>
+          <button class="chip mono" type="button" data-filter="mobile" aria-pressed="false">MOBILE <span class="chip-count"></span></button>
+          <button class="chip chip-stack mono" type="button" id="stackChip" hidden aria-pressed="true"></button>
         </div>
-
-        <!-- ======================== SKILLS ======================== -->
-        <div class="card" id="card-skills">
-          <div class="card-content">
-            <div class="section-heading">
-              <div class="tape tape-yellow tape-tilt-left"></div>
-              <h2 class="card-title">Technical Skills</h2>
-              <div class="heading-underline"></div>
-            </div>
-            <div class="skills-board">
-              <div class="skill-column">
-                <h3 class="skill-column-title">&#9997; Languages</h3>
-                <div class="sticker-wall">
-                  <span class="sticker sticker-lg">Python</span>
-                  <span class="sticker">Java</span>
-                  <span class="sticker">C</span>
-                  <span class="sticker">C#</span>
-                  <span class="sticker sticker-lg">HTML/CSS</span>
-                  <span class="sticker">PHP</span>
-                  <span class="sticker">SQL</span>
-                  <span class="sticker">Linux</span>
-                </div>
-              </div>
-              <div class="skill-column">
-                <h3 class="skill-column-title">&#9881; Frameworks</h3>
-                <div class="sticker-wall">
-                  <span class="sticker sticker-lg">React / Next.js</span>
-                  <span class="sticker">Tailwind CSS</span>
-                  <span class="sticker">Three.js</span>
-                  <span class="sticker">FastAPI</span>
-                  <span class="sticker">Framer Motion</span>
-                  <span class="sticker">Unity</span>
-                </div>
-              </div>
-              <div class="skill-column">
-                <h3 class="skill-column-title">&#9733; AI &amp; Tools</h3>
-                <div class="sticker-wall">
-                  <span class="sticker">Gemini API</span>
-                  <span class="sticker">Semantic Embeddings</span>
-                  <span class="sticker">NLP</span>
-                  <span class="sticker sticker-lg">Git / GitHub</span>
-                  <span class="sticker">VS Code</span>
-                  <span class="sticker">Vercel</span>
-                  <span class="sticker">Arduino</span>
-                  <span class="sticker">Google Cloud</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ======================== PROJECTS ======================== -->
-        <div class="card" id="card-project">
-          <div class="card-content">
-            <div class="section-heading">
-              <div class="tape tape-coral tape-tilt-right"></div>
-              <h2 class="card-title">Projects</h2>
-              <div class="heading-underline"></div>
-            </div>
-
-            <!-- Project Tabs -->
-            <div class="project-tabs">
-              <button class="project-tab active" data-project="argus">Argus</button>
-              <button class="project-tab" data-project="neondrift">NeonDrift</button>
-              <button class="project-tab" data-project="tejimola">Tejimola</button>
-            </div>
-
-            <!-- PROJECT: ARGUS -->
-            <div class="project-postcard project-panel active" id="project-argus">
-              <div class="postcard-header">
-                <div class="postmark">
-                  <div class="postmark-circle">
-                    <span>MAC-A-THON</span>
-                    <span>2026</span>
-                  </div>
-                </div>
-                <div class="postcard-title-area">
-                  <h3 class="project-name-big">ARGUS</h3>
-                  <p class="project-subtitle">Government Intelligence Platform</p>
-                </div>
-                <div class="postcard-stamp">
-                  <span>GDG</span>
-                  <span class="stamp-val">McMaster</span>
-                </div>
-              </div>
-
-              <p class="project-quote handwritten">&ldquo;Know what governments need before they post the RFP&rdquo;</p>
-
-              <div class="metrics-strip">
-                <div class="metric-badge"><span class="metric-num">&gt;85%</span><span class="metric-lbl">Accuracy</span></div>
-                <div class="metric-badge"><span class="metric-num">&lt;3s</span><span class="metric-lbl">Response</span></div>
-                <div class="metric-badge"><span class="metric-num">Live</span><span class="metric-lbl">Signals</span></div>
-                <div class="metric-badge"><span class="metric-num">Global</span><span class="metric-lbl">Coverage</span></div>
-              </div>
-
-              <div class="project-inner">
-                <div class="project-desc">
-                  <p>AI-powered platform that monitors government procurement signals in real-time, matches them to startup capabilities, and generates personalized outreach.</p>
-                  <div class="flow-pipeline">
-                    <span class="pipe-step"><b>01</b> Describe</span>
-                    <span class="pipe-join">&#10230;</span>
-                    <span class="pipe-step"><b>02</b> Analyze</span>
-                    <span class="pipe-join">&#10230;</span>
-                    <span class="pipe-step"><b>03</b> Match</span>
-                    <span class="pipe-join">&#10230;</span>
-                    <span class="pipe-step"><b>04</b> Engage</span>
-                  </div>
-                </div>
-                <div class="project-stack-card">
-                  <div class="stack-row"><span class="stack-key">Frontend:</span> Next.js, React, Three.js, Tailwind, Framer Motion</div>
-                  <div class="stack-row"><span class="stack-key">Backend:</span> FastAPI, Python</div>
-                  <div class="stack-row"><span class="stack-key">AI/ML:</span> Gemini 2.5 Flash, Semantic Embeddings</div>
-                </div>
-              </div>
-
-              <div class="project-actions">
-                <a href="https://argus-macathon.vercel.app/" target="_blank" rel="noopener noreferrer" class="deck-btn deck-btn-filled">&#9654; Live Demo</a>
-                <a href="https://github.com/dunura13/Argus" target="_blank" rel="noopener noreferrer" class="deck-btn">GitHub</a>
-                <a href="https://devpost.com/software/argus-uipa2c" target="_blank" rel="noopener noreferrer" class="deck-btn">Devpost</a>
-              </div>
-              <p class="team-credit handwritten">team of 4 &bull; McMaster, TMU &amp; UofT</p>
-            </div>
-
-            <!-- PROJECT: NEONDRIFT -->
-            <div class="project-postcard project-panel" id="project-neondrift">
-              <div class="postcard-header">
-                <div class="postmark">
-                  <div class="postmark-circle">
-                    <span>DELTAHACKS</span>
-                    <span>2026</span>
-                  </div>
-                </div>
-                <div class="postcard-title-area">
-                  <h3 class="project-name-big">NEONDRIFT</h3>
-                  <p class="project-subtitle">Browser-Based Arcade Runner</p>
-                </div>
-                <div class="postcard-stamp">
-                  <span>&#127918;</span>
-                  <span class="stamp-val">Game</span>
-                </div>
-              </div>
-
-              <p class="project-quote handwritten">&ldquo;Zero dependencies, pure adrenaline&rdquo;</p>
-
-              <div class="metrics-strip">
-                <div class="metric-badge"><span class="metric-num">60</span><span class="metric-lbl">FPS</span></div>
-                <div class="metric-badge"><span class="metric-num">0</span><span class="metric-lbl">Dependencies</span></div>
-                <div class="metric-badge"><span class="metric-num">PWA</span><span class="metric-lbl">Ready</span></div>
-                <div class="metric-badge"><span class="metric-num">Cross</span><span class="metric-lbl">Platform</span></div>
-              </div>
-
-              <div class="project-inner">
-                <div class="project-desc">
-                  <p>A high-octane browser-based arcade runner built with pure HTML5 Canvas and vanilla JavaScript. Features dynamic difficulty scaling, combo-based scoring, and powerups including shield, magnet, and slow-motion.</p>
-                  <div class="flow-pipeline">
-                    <span class="pipe-step"><b>01</b> Canvas Render</span>
-                    <span class="pipe-join">&#10230;</span>
-                    <span class="pipe-step"><b>02</b> Physics Loop</span>
-                    <span class="pipe-join">&#10230;</span>
-                    <span class="pipe-step"><b>03</b> Score &amp; Combo</span>
-                    <span class="pipe-join">&#10230;</span>
-                    <span class="pipe-step"><b>04</b> Powerups</span>
-                  </div>
-                </div>
-                <div class="project-stack-card">
-                  <div class="stack-row"><span class="stack-key">Engine:</span> HTML5 Canvas, Vanilla JavaScript</div>
-                  <div class="stack-row"><span class="stack-key">Features:</span> Dynamic difficulty, combo scoring</div>
-                  <div class="stack-row"><span class="stack-key">Powerups:</span> Shield, Magnet, Slow-mo</div>
-                </div>
-              </div>
-
-              <div class="project-actions">
-                <a href="https://mangokrish.github.io/NeonDrift/" target="_blank" rel="noopener noreferrer" class="deck-btn deck-btn-filled">&#9654; Play Game</a>
-                <a href="https://github.com/MangoKrish/NeonDrift" target="_blank" rel="noopener noreferrer" class="deck-btn">GitHub</a>
-              </div>
-              <p class="team-credit handwritten">DeltaHacks XI &bull; January 2026</p>
-            </div>
-
-            <!-- PROJECT: TEJIMOLA -->
-            <div class="project-postcard project-panel" id="project-tejimola">
-              <div class="postcard-header">
-                <div class="postmark">
-                  <div class="postmark-circle">
-                    <span>NARRATIVE</span>
-                    <span>2026</span>
-                  </div>
-                </div>
-                <div class="postcard-title-area">
-                  <h3 class="project-name-big">TEJIMOLA</h3>
-                  <p class="project-subtitle">2D Narrative Adventure Game</p>
-                </div>
-                <div class="postcard-stamp">
-                  <span>&#127917;</span>
-                  <span class="stamp-val">Unity</span>
-                </div>
-              </div>
-
-              <p class="project-quote handwritten">&ldquo;A 90-minute journey through an Assamese folktale&rdquo;</p>
-
-              <div class="metrics-strip">
-                <div class="metric-badge"><span class="metric-num">90</span><span class="metric-lbl">Minutes</span></div>
-                <div class="metric-badge"><span class="metric-num">4</span><span class="metric-lbl">Acts</span></div>
-                <div class="metric-badge"><span class="metric-num">2.5D</span><span class="metric-lbl">World</span></div>
-                <div class="metric-badge"><span class="metric-num">AI</span><span class="metric-lbl">Assisted</span></div>
-              </div>
-
-              <div class="project-inner">
-                <div class="project-desc">
-                  <p>A narrative adventure game bringing an Assamese folktale to life across 4 acts: exploration, stealth, rhythm, and boss battle. Features event-driven systems, adaptive audio, JSON-driven dialogue, and a rhythm engine.</p>
-                  <div class="flow-pipeline">
-                    <span class="pipe-step"><b>01</b> Explore</span>
-                    <span class="pipe-join">&#10230;</span>
-                    <span class="pipe-step"><b>02</b> Stealth</span>
-                    <span class="pipe-join">&#10230;</span>
-                    <span class="pipe-step"><b>03</b> Rhythm</span>
-                    <span class="pipe-join">&#10230;</span>
-                    <span class="pipe-step"><b>04</b> Boss</span>
-                  </div>
-                </div>
-                <div class="project-stack-card">
-                  <div class="stack-row"><span class="stack-key">Engine:</span> Unity, C#</div>
-                  <div class="stack-row"><span class="stack-key">Systems:</span> Event-driven, adaptive audio, rhythm engine</div>
-                  <div class="stack-row"><span class="stack-key">AI:</span> Claude Code assisted development</div>
-                </div>
-              </div>
-
-              <div class="project-actions">
-                <a href="https://github.com/MangoKrish/tejimola-blossom" target="_blank" rel="noopener noreferrer" class="deck-btn deck-btn-filled">&#9654; View Project</a>
-              </div>
-              <p class="team-credit handwritten">February 2026 &bull; AI-assisted development</p>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- ======================== INTERESTS ======================== -->
-        <div class="card" id="card-interests">
-          <div class="card-content">
-            <div class="section-heading">
-              <div class="tape tape-pink tape-tilt-left"></div>
-              <h2 class="card-title">Interests &amp; Hobbies</h2>
-              <div class="heading-underline"></div>
-            </div>
-            <div class="interest-board">
-              <div class="interest-pin interest-wide">
-                <div class="pin-tack pin-red"></div>
-                <h3>&#128187; Software Engineering</h3>
-                <p>Crafting robust, scalable software solutions. System design, clean architecture, and full-stack development.</p>
-              </div>
-              <div class="interest-pin">
-                <div class="pin-tack pin-blue"></div>
-                <h3>&#9881; Robotics</h3>
-                <p>Bridging physical and digital worlds through intelligent robotic systems.</p>
-              </div>
-              <div class="interest-pin">
-                <div class="pin-tack pin-yellow"></div>
-                <h3>&#128172; NLP</h3>
-                <p>Exploring how machines understand and generate human language.</p>
-              </div>
-            </div>
-
-            <div class="divider-doodle">&#10049; &#10049; &#10049;</div>
-
-            <h3 class="sub-heading handwritten">beyond code...</h3>
-            <div class="hobby-tickets">
-              <a href="https://ratings.fide.com/profile/547078332" target="_blank" rel="noopener noreferrer" class="ticket ticket-link">
-                <div class="ticket-stub"></div>
-                <div class="ticket-body"><span class="ticket-icon">&#9822;</span><span class="ticket-label">Chess</span><span class="ticket-cta">Click here!</span></div>
-              </a>
-              <div class="ticket">
-                <div class="ticket-stub"></div>
-                <div class="ticket-body"><span class="ticket-icon">&#127992;</span><span class="ticket-label">Badminton</span></div>
-              </div>
-              <div class="ticket">
-                <div class="ticket-stub"></div>
-                <div class="ticket-body"><span class="ticket-icon">&#127925;</span><span class="ticket-label">Music</span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ======================== CONTACT ======================== -->
-        <div class="card" id="card-contact">
-          <div class="card-content">
-            <div class="section-heading">
-              <div class="tape tape-blue tape-tilt-left"></div>
-              <h2 class="card-title">Get In Touch</h2>
-              <div class="heading-underline"></div>
-            </div>
-            <div class="contact-layout">
-              <div class="contact-letter">
-                <p>I'm actively looking for co-op and internship opportunities in Software Engineering, Robotics, and NLP.</p>
-                <p class="handwritten letter-signoff">Let's build something together!</p>
-                <p class="letter-sig">&mdash; Akshay</p>
-              </div>
-              <div class="contact-envelopes">
-                <a href="mailto:sirigana@mcmaster.ca" class="envelope-link">
-                  <span class="env-icon">&#9993;</span>
-                  <div><span class="env-label">Email</span><span class="env-value">sirigana@mcmaster.ca</span></div>
-                </a>
-                <a href="https://www.linkedin.com/in/akshay-krishna-sirigana-1b718a380/" target="_blank" rel="noopener noreferrer" class="envelope-link">
-                  <span class="env-icon">&#9741;</span>
-                  <div><span class="env-label">LinkedIn</span><span class="env-value">Akshay Krishna Sirigana</span></div>
-                </a>
-                <a href="https://github.com/MangoKrish" target="_blank" rel="noopener noreferrer" class="envelope-link">
-                  <span class="env-icon">&#128193;</span>
-                  <div><span class="env-label">GitHub</span><span class="env-value">MangoKrish</span></div>
-                </a>
-                <a href="Resume_Krish.pdf" target="_blank" rel="noopener noreferrer" class="envelope-link envelope-resume">
-                  <span class="env-icon">&#128196;</span>
-                  <div><span class="env-label">Resume</span><span class="env-value">Download PDF</span></div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div><!-- /canvas-area -->
-
-      <!-- Right Sidebar: Sticker Sheet -->
-      <div class="sidebar-stickers">
-        <div class="sidebar-title">stickers</div>
-        <div class="sidebar-item sb-star">&#9733;</div>
-        <div class="sidebar-item sb-heart">&#10084;</div>
-        <div class="sidebar-item sb-bolt">&#9889;</div>
-        <div class="sidebar-item sb-flower">&#10048;</div>
-        <div class="sidebar-item sb-music">&#9835;</div>
-        <div class="sidebar-item sb-code">&lt;/&gt;</div>
+        <p class="filter-count mono" id="filterCount" aria-live="polite">10 PROJECTS / 10 SHOWN</p>
       </div>
 
-    </div><!-- /decker-body -->
+      <ol class="work-index" id="workIndex">
 
-    <!-- Bottom Toolbar -->
-    <div class="bottom-bar">
-      <button class="bar-btn" data-card="prev">&#9664; prev</button>
-      <button class="bar-btn" data-card="next">next &#9654;</button>
-      <span class="bar-counter" id="cardCounter">1 / 6</span>
-      <span class="bar-sep">|</span>
-      <span class="bar-label">&#128206; portfolio.deck</span>
-      <span class="bar-timestamp" id="barTime"></span>
+        <!-- 01 PEPPA -->
+        <li class="work-item" data-cat="ai" data-stack="python llm embeddings rag">
+          <details class="work-row" id="p-peppa">
+            <summary>
+              <span class="row-num mono" aria-hidden="true">01</span>
+              <span class="row-title">Peppa — Local Voice Assistant<span class="row-flag mono">FEATURED</span></span>
+              <span class="row-leader" aria-hidden="true"></span>
+              <span class="row-meta mono">2026 · PYTHON / MLX / OLLAMA</span>
+              <span class="row-glyph" aria-hidden="true">+</span>
+            </summary>
+            <div class="spread">
+              <div class="spread-fig">
+                <pre class="plate mono" aria-hidden="true" data-plate="peppa"></pre>
+                <p class="fig-caption mono">FIG. 01 — FIVE MODELS, ONE MACHINE, ZERO CLOUD</p>
+              </div>
+              <div class="spread-body">
+                <p class="spread-dek">A Jarvis-style voice assistant that runs entirely on a laptop — no cloud, no API keys, no audio leaving the room.</p>
+                <dl class="case-file">
+                  <div class="case-row"><dt class="mono">PROBLEM</dt><dd>Voice assistants ship your voice, questions, and files to someone else's servers. I wanted Jarvis-grade help with nothing leaving the machine.</dd></div>
+                  <div class="case-row"><dt class="mono">APPROACH</dt><dd>Five on-device models (14B chat, 32B reasoning, coder, vision, embeddings) behind a router with five thinking modes — the deepest one plans, investigates with tools, then has a second model red-team the draft before it's spoken. Speech streams sentence-by-sentence while the answer is still generating, with barge-in interruption. For arithmetic it refuses to guess in-weights and instead writes and runs Python in a sandbox.</dd></div>
+                  <div class="case-row"><dt class="mono">STACK</dt><dd>Python 3.12 · Ollama (Qwen2.5) · MLX-Whisper · on-device TTS voice cloning · PySide6 · local RAG · sandboxed code execution</dd></div>
+                  <div class="case-row"><dt class="mono">OUTCOME</dt><dd>Sub-2-second voice-to-voice latency, 46 tool skills, and a deterministic reflex layer that keeps it answering even with the LLM runtime fully offline.</dd></div>
+                </dl>
+                <p class="metrics mono"><span>16,400+ LINES</span><span>242 TESTS</span><span>46 SKILLS</span><span>5 LOCAL MODELS</span></p>
+                <p class="spread-links mono"><span class="status-tag">LOCAL-ONLY BUILD — DEMO ON REQUEST</span></p>
+              </div>
+            </div>
+          </details>
+        </li>
+
+        <!-- 02 ARGUS -->
+        <li class="work-item" data-cat="ai" data-stack="python react nextjs threejs tailwind fastapi gemini embeddings llm">
+          <details class="work-row" id="p-argus">
+            <summary>
+              <span class="row-num mono" aria-hidden="true">02</span>
+              <span class="row-title">Argus — Government Intelligence Platform<span class="row-flag mono">FEATURED</span></span>
+              <span class="row-leader" aria-hidden="true"></span>
+              <span class="row-meta mono">2026 · NEXT.JS / FASTAPI / GEMINI</span>
+              <span class="row-glyph" aria-hidden="true">+</span>
+            </summary>
+            <div class="spread">
+              <div class="spread-fig">
+                <pre class="plate mono" aria-hidden="true" data-plate="argus"></pre>
+                <p class="fig-caption mono">FIG. 02 — SIGNALS → CAPABILITIES → OUTREACH</p>
+              </div>
+              <div class="spread-body">
+                <p class="spread-dek">Know what governments need before they post the RFP.</p>
+                <dl class="case-file">
+                  <div class="case-row"><dt class="mono">PROBLEM</dt><dd>Startups discover government procurement opportunities after the RFP drops — too late to prepare or shape the bid.</dd></div>
+                  <div class="case-row"><dt class="mono">APPROACH</dt><dd>Monitor procurement signals in real time, match them to startup capability profiles using Gemini 2.5 Flash plus semantic embeddings, and generate personalized outreach — all visualized on an interactive Three.js globe of live global signals.</dd></div>
+                  <div class="case-row"><dt class="mono">STACK</dt><dd>Next.js · React · Three.js · Tailwind · Framer Motion · FastAPI · Python · Gemini 2.5 Flash · semantic embeddings</dd></div>
+                  <div class="case-row"><dt class="mono">OUTCOME</dt><dd>85%+ match accuracy with sub-3-second responses. Built at Mac-a-thon 2026 with a cross-university team of four (McMaster, TMU, UofT).</dd></div>
+                </dl>
+                <p class="metrics mono"><span>&gt;85% ACCURACY</span><span>&lt;3s RESPONSE</span><span>LIVE SIGNALS</span><span>TEAM OF 4</span></p>
+                <p class="spread-links mono">
+                  <a href="https://argus-macathon.vercel.app/" target="_blank" rel="noopener noreferrer">LIVE DEMO ↗</a>
+                  <a href="https://github.com/dunura13/Argus" target="_blank" rel="noopener noreferrer">GITHUB ↗</a>
+                  <a href="https://devpost.com/software/argus-uipa2c" target="_blank" rel="noopener noreferrer">DEVPOST ↗</a>
+                </p>
+              </div>
+            </div>
+          </details>
+        </li>
+
+        <!-- 03 MENTORMATCH -->
+        <li class="work-item" data-cat="web" data-stack="react typescript sql supabase vite">
+          <details class="work-row" id="p-mentormatch">
+            <summary>
+              <span class="row-num mono" aria-hidden="true">03</span>
+              <span class="row-title">MentorMatch — Explainable Matching Engine</span>
+              <span class="row-leader" aria-hidden="true"></span>
+              <span class="row-meta mono">2026 · REACT / SUPABASE / SQL</span>
+              <span class="row-glyph" aria-hidden="true">+</span>
+            </summary>
+            <div class="spread">
+              <div class="spread-fig">
+                <pre class="plate mono" aria-hidden="true" data-plate="mentormatch"></pre>
+                <p class="fig-caption mono">FIG. 03 — SCORING THAT EXPLAINS ITSELF</p>
+              </div>
+              <div class="spread-body">
+                <p class="spread-dek">A mentor-recommendation engine that lives inside Postgres and gives students reasons, never raw scores.</p>
+                <dl class="case-file">
+                  <div class="case-row"><dt class="mono">PROBLEM</dt><dd>Students on a mentorship platform picked mentors from a flat directory; naive match scores are either opaque or uncomfortable to show.</dd></div>
+                  <div class="case-row"><dt class="mono">APPROACH</dt><dd>A weighted compatibility engine as a security-definer plpgsql RPC — normalized 0–100 scoring across admin-tunable dimensions with cached score rows. Privacy by design: no student can read the scores table; the API returns only ranked mentors with plain-language reasons. Then a zero-behavior-change modular refactor of the production portal, verified against the pre-refactor codebase, and a WCAG-AA design-token redesign.</dd></div>
+                  <div class="case-row"><dt class="mono">STACK</dt><dd>React 18 · Vite · Supabase (Postgres, RLS, plpgsql) · Deno Edge Functions · Cloudflare R2 · Vercel</dd></div>
+                  <div class="case-row"><dt class="mono">OUTCOME</dt><dd>644 lines of SQL across 4 migrations; a 92-file refactor (+6,599 / −3,029 lines) with byte-level behavior parity. My end of a two-person product team.</dd></div>
+                </dl>
+                <p class="metrics mono"><span>644 LINES SQL</span><span>92-FILE REFACTOR</span><span>WCAG AA</span><span>TEAM OF 2</span></p>
+                <p class="spread-links mono">
+                  <a href="https://mastermentor-marketing-diner.vercel.app" target="_blank" rel="noopener noreferrer">MARKETING SITE ↗</a>
+                  <a href="https://github.com/MangoKrish/mastermentor-marketing-diner" target="_blank" rel="noopener noreferrer">GITHUB ↗</a>
+                </p>
+              </div>
+            </div>
+          </details>
+        </li>
+
+        <!-- 04 PROPOSALPILOT -->
+        <li class="work-item" data-cat="ai" data-stack="javascript llm gemini">
+          <details class="work-row" id="p-proposalpilot">
+            <summary>
+              <span class="row-num mono" aria-hidden="true">04</span>
+              <span class="row-title">ProposalPilot — BYOK Proposal Drafter</span>
+              <span class="row-leader" aria-hidden="true"></span>
+              <span class="row-meta mono">2026 · CHROME MV3 / VANILLA JS</span>
+              <span class="row-glyph" aria-hidden="true">+</span>
+            </summary>
+            <div class="spread">
+              <div class="spread-fig">
+                <pre class="plate mono" aria-hidden="true" data-plate="proposalpilot"></pre>
+                <p class="fig-caption mono">FIG. 04 — JOB POST IN, PROPOSAL OUT</p>
+              </div>
+              <div class="spread-body">
+                <p class="spread-dek">A Chrome side-panel extension that turns any job post into a tailored freelance proposal — on your own API key.</p>
+                <dl class="case-file">
+                  <div class="case-row"><dt class="mono">PROBLEM</dt><dd>Freelancers rewrite near-identical proposals all day, and most AI helpers route their clients' job posts through a third-party server.</dd></div>
+                  <div class="case-row"><dt class="mono">APPROACH</dt><dd>Bring-your-own-key architecture: the browser talks directly to OpenAI, Anthropic, or Gemini — no backend at all. Reads the job post from the page (selection first, then an article-heuristic DOM walk), drafts in the freelancer's voice, and inserts the result into the reply box using the native value setter with synthetic events so React-controlled textareas accept it.</dd></div>
+                  <div class="case-row"><dt class="mono">STACK</dt><dd>Chrome Extensions MV3 · Side Panel API · optional host permissions · vanilla ES modules · Node test harness</dd></div>
+                  <div class="case-row"><dt class="mono">OUTCOME</dt><dd>~950 lines including tests, zero runtime dependencies, and a pure-function AI layer unit-tested in Node across all three providers.</dd></div>
+                </dl>
+                <p class="metrics mono"><span>3 PROVIDERS</span><span>0 BACKEND</span><span>0 DEPENDENCIES</span><span>~950 LINES</span></p>
+                <p class="spread-links mono"><span class="status-tag">v0.1 — UNRELEASED</span></p>
+              </div>
+            </div>
+          </details>
+        </li>
+
+        <!-- 05 DIMENSION DASH -->
+        <li class="work-item" data-cat="games" data-stack="javascript webaudio">
+          <details class="work-row" id="p-dimensiondash">
+            <summary>
+              <span class="row-num mono" aria-hidden="true">05</span>
+              <span class="row-title">Dimension Dash — Physics as a Game</span>
+              <span class="row-leader" aria-hidden="true"></span>
+              <span class="row-meta mono">2026 · VANILLA JS / WEB AUDIO</span>
+              <span class="row-glyph" aria-hidden="true">+</span>
+            </summary>
+            <div class="spread">
+              <div class="spread-fig">
+                <pre class="plate mono" aria-hidden="true" data-plate="dimensiondash"></pre>
+                <p class="fig-caption mono">FIG. 05 — 94 FORMULAE, 6 MODES, 1 SCHEDULER</p>
+              </div>
+              <div class="spread-body">
+                <p class="spread-dek">A spaced-repetition study game that teaches all 94 dimensional formulae from Class 11 physics.</p>
+                <dl class="case-file">
+                  <div class="case-row"><dt class="mono">PROBLEM</dt><dd>Dimensional formulae are a classic exam trap — 94 near-identical expressions that students usually brute-force by rote.</dd></div>
+                  <div class="case-row"><dt class="mono">APPROACH</dt><dd>A custom SM-2/Leitner spaced-repetition scheduler drives six exam-aligned game modes — including a Build Lab where formulae are assembled from exponent bricks. Confusion sets are computed at runtime by grouping quantities with identical dimensions, and anchor formulae are force-surfaced first so the rest can be derived, not memorized.</dd></div>
+                  <div class="case-row"><dt class="mono">STACK</dt><dd>Vanilla JS/HTML/CSS · Web Audio synthesis · versioned localStorage · zero dependencies</dd></div>
+                  <div class="case-row"><dt class="mono">OUTCOME</dt><dd>~3,000 dependency-free lines with a 94-cell mastery heatmap, JSON export/import, pre-paint theming, and reduced-motion support.</dd></div>
+                </dl>
+                <p class="metrics mono"><span>94 FORMULAE</span><span>6 GAME MODES</span><span>0 DEPENDENCIES</span><span>~3,000 LINES</span></p>
+                <p class="spread-links mono"><span class="status-tag">PRIVATE BUILD</span></p>
+              </div>
+            </div>
+          </details>
+        </li>
+
+        <!-- 06 DUET PLANNER -->
+        <li class="work-item" data-cat="web" data-stack="javascript node pwa sse">
+          <details class="work-row" id="p-duetplanner">
+            <summary>
+              <span class="row-num mono" aria-hidden="true">06</span>
+              <span class="row-title">Duet — Offline-First Planner PWA</span>
+              <span class="row-leader" aria-hidden="true"></span>
+              <span class="row-meta mono">2026 · VANILLA JS / NODE STDLIB</span>
+              <span class="row-glyph" aria-hidden="true">+</span>
+            </summary>
+            <div class="spread">
+              <div class="spread-fig">
+                <pre class="plate mono" aria-hidden="true" data-plate="duetplanner"></pre>
+                <p class="fig-caption mono">FIG. 06 — TWO TIMEZONES, ONE STATE</p>
+              </div>
+              <div class="spread-body">
+                <p class="spread-dek">A collaborative planner for two people in timezones 10.5 hours apart — built from scratch with zero packages.</p>
+                <dl class="case-file">
+                  <div class="case-row"><dt class="mono">PROBLEM</dt><dd>Shared calendars assume the same timezone, need accounts in someone's cloud, and fall over offline.</dd></div>
+                  <div class="case-row"><dt class="mono">APPROACH</dt><dd>A last-write-wins merge-by-id sync algorithm implemented identically on client and server, so devices can edit offline and reconcile deterministically on reconnect. Live sync over Server-Sent Events; per-user timezone math with the Intl API, including day-boundary handling; a mutual free-time finder that intersects both schedules; and an optional AI assistant served by a local LLM.</dd></div>
+                  <div class="case-row"><dt class="mono">STACK</dt><dd>Vanilla JS · Node standard library only (319-line backend) · SSE · Service Workers · Intl API · Ollama</dd></div>
+                  <div class="case-row"><dt class="mono">OUTCOME</dt><dd>~6,000 hand-written lines, zero npm packages, five calendar views, atomic write-then-rename persistence.</dd></div>
+                </dl>
+                <p class="metrics mono"><span>0 NPM PACKAGES</span><span>~6,000 LINES</span><span>5 VIEWS</span><span>319-LINE BACKEND</span></p>
+                <p class="spread-links mono"><span class="status-tag">PRIVATE BUILD</span></p>
+              </div>
+            </div>
+          </details>
+        </li>
+
+        <!-- 07 TEJIMOLA -->
+        <li class="work-item" data-cat="games" data-stack="csharp unity">
+          <details class="work-row" id="p-tejimola">
+            <summary>
+              <span class="row-num mono" aria-hidden="true">07</span>
+              <span class="row-title">Tejimola — The Blossom from Clay</span>
+              <span class="row-leader" aria-hidden="true"></span>
+              <span class="row-meta mono">2026 · UNITY / C#</span>
+              <span class="row-glyph" aria-hidden="true">+</span>
+            </summary>
+            <div class="spread">
+              <div class="spread-fig">
+                <pre class="plate mono" aria-hidden="true" data-plate="tejimola"></pre>
+                <p class="fig-caption mono">FIG. 07 — FOUR ACTS, ONE FOLKTALE</p>
+              </div>
+              <div class="spread-body">
+                <p class="spread-dek">A 90-minute narrative adventure bringing an Assamese folktale to life.</p>
+                <dl class="case-file">
+                  <div class="case-row"><dt class="mono">PROBLEM</dt><dd>Regional folktales rarely make it into games; I wanted to celebrate Assamese heritage with mechanics that serve the story.</dd></div>
+                  <div class="case-row"><dt class="mono">APPROACH</dt><dd>Four acts with four distinct mechanics — exploration, stealth, rhythm, and a boss battle — across a 2.5D world. Event-driven systems throughout: adaptive audio, JSON-driven branching dialogue, and a dspTime-based rhythm engine.</dd></div>
+                  <div class="case-row"><dt class="mono">STACK</dt><dd>Unity · C# · event-driven architecture · AI-assisted development workflow</dd></div>
+                  <div class="case-row"><dt class="mono">OUTCOME</dt><dd>A complete, playable 90-minute experience across four acts.</dd></div>
+                </dl>
+                <p class="metrics mono"><span>90 MINUTES</span><span>4 ACTS</span><span>2.5D WORLD</span><span>RHYTHM ENGINE</span></p>
+                <p class="spread-links mono">
+                  <a href="https://github.com/MangoKrish/tejimola-blossom" target="_blank" rel="noopener noreferrer">GITHUB ↗</a>
+                </p>
+              </div>
+            </div>
+          </details>
+        </li>
+
+        <!-- 08 NEONDRIFT -->
+        <li class="work-item" data-cat="games" data-stack="javascript pwa">
+          <details class="work-row" id="p-neondrift">
+            <summary>
+              <span class="row-num mono" aria-hidden="true">08</span>
+              <span class="row-title">NeonDrift — Arcade Runner</span>
+              <span class="row-leader" aria-hidden="true"></span>
+              <span class="row-meta mono">2026 · HTML5 CANVAS / VANILLA JS</span>
+              <span class="row-glyph" aria-hidden="true">+</span>
+            </summary>
+            <div class="spread">
+              <div class="spread-fig">
+                <pre class="plate mono" aria-hidden="true" data-plate="neondrift"></pre>
+                <p class="fig-caption mono">FIG. 08 — SIXTY FRAMES, ZERO DEPENDENCIES</p>
+              </div>
+              <div class="spread-body">
+                <p class="spread-dek">A high-octane browser arcade runner in pure Canvas — built at DeltaHacks XI.</p>
+                <dl class="case-file">
+                  <div class="case-row"><dt class="mono">PROBLEM</dt><dd>Make a browser game feel arcade-tight using nothing but the platform.</dd></div>
+                  <div class="case-row"><dt class="mono">APPROACH</dt><dd>Hand-rolled physics loop and renderer on HTML5 Canvas with dynamic difficulty scaling, combo-chain scoring, and powerups — shield, magnet, slow-motion. Keyboard, touch, and drag controls for desktop and mobile.</dd></div>
+                  <div class="case-row"><dt class="mono">STACK</dt><dd>HTML5 Canvas · vanilla JavaScript · PWA architecture</dd></div>
+                  <div class="case-row"><dt class="mono">OUTCOME</dt><dd>A consistent 60 FPS render target, cross-platform controls, and offline play.</dd></div>
+                </dl>
+                <p class="metrics mono"><span>60 FPS</span><span>0 DEPENDENCIES</span><span>PWA</span><span>CROSS-PLATFORM</span></p>
+                <p class="spread-links mono">
+                  <a href="https://mangokrish.github.io/NeonDrift/" target="_blank" rel="noopener noreferrer">PLAY ↗</a>
+                  <a href="https://github.com/MangoKrish/NeonDrift" target="_blank" rel="noopener noreferrer">GITHUB ↗</a>
+                </p>
+              </div>
+            </div>
+          </details>
+        </li>
+
+        <!-- 09 PETAL -->
+        <li class="work-item" data-cat="mobile" data-stack="kotlin compose">
+          <details class="work-row" id="p-petal">
+            <summary>
+              <span class="row-num mono" aria-hidden="true">09</span>
+              <span class="row-title">Petal — Cycle Tracker for Android</span>
+              <span class="row-leader" aria-hidden="true"></span>
+              <span class="row-meta mono">2026 · KOTLIN / JETPACK COMPOSE</span>
+              <span class="row-glyph" aria-hidden="true">+</span>
+            </summary>
+            <div class="spread">
+              <div class="spread-fig">
+                <pre class="plate mono" aria-hidden="true" data-plate="petal"></pre>
+                <p class="fig-caption mono">FIG. 09 — NATIVE, PRIVATE, ON-DEVICE</p>
+              </div>
+              <div class="spread-body">
+                <p class="spread-dek">An Android-native period and cycle tracker built with modern app architecture.</p>
+                <dl class="case-file">
+                  <div class="case-row"><dt class="mono">PROBLEM</dt><dd>Cycle tracking is deeply personal data — it deserves a native, local-first home rather than an ad-funded app.</dd></div>
+                  <div class="case-row"><dt class="mono">APPROACH</dt><dd>Kotlin and Jetpack Compose UI over a repository architecture: Room database with DAOs for cycles and daily fertility logs, Health Connect integration, pattern-flag insights, and an education library — 144 Kotlin files in a clean data/domain/presentation split.</dd></div>
+                  <div class="case-row"><dt class="mono">STACK</dt><dd>Kotlin · Jetpack Compose · Room · Health Connect · Retrofit</dd></div>
+                  <div class="case-row"><dt class="mono">OUTCOME</dt><dd>A working native app with offline-first storage and Health Connect sync.</dd></div>
+                </dl>
+                <p class="metrics mono"><span>144 KOTLIN FILES</span><span>ROOM + DAOs</span><span>HEALTH CONNECT</span></p>
+                <p class="spread-links mono">
+                  <a href="https://github.com/MangoKrish/petal-android" target="_blank" rel="noopener noreferrer">GITHUB ↗</a>
+                </p>
+              </div>
+            </div>
+          </details>
+        </li>
+
+        <!-- 10 MUSIC PLAYER RN -->
+        <li class="work-item" data-cat="mobile" data-stack="typescript react-native react">
+          <details class="work-row" id="p-musicplayer">
+            <summary>
+              <span class="row-num mono" aria-hidden="true">10</span>
+              <span class="row-title">Music Player — Streaming Audio App</span>
+              <span class="row-leader" aria-hidden="true"></span>
+              <span class="row-meta mono">2026 · REACT NATIVE / TYPESCRIPT</span>
+              <span class="row-glyph" aria-hidden="true">+</span>
+            </summary>
+            <div class="spread">
+              <div class="spread-fig">
+                <pre class="plate mono" aria-hidden="true" data-plate="musicplayer"></pre>
+                <p class="fig-caption mono">FIG. 10 — QUEUE SURVIVES THE RESTART</p>
+              </div>
+              <div class="spread-body">
+                <p class="spread-dek">A full-featured streaming music player with background audio and a persistent queue.</p>
+                <dl class="case-file">
+                  <div class="case-row"><dt class="mono">PROBLEM</dt><dd>Build a real music app — not a demo: search, background playback, and state that doesn’t reset every launch.</dd></div>
+                  <div class="case-row"><dt class="mono">APPROACH</dt><dd>Expo dev-client app with debounced infinite-scroll search, full playback via expo-av with background support, a mini-player synced with the full player across screens, shuffle and repeat modes, and queue persistence in MMKV for synchronous O(1) reads.</dd></div>
+                  <div class="case-row"><dt class="mono">STACK</dt><dd>React Native (Expo) · TypeScript · Zustand · expo-av · MMKV · React Navigation</dd></div>
+                  <div class="case-row"><dt class="mono">OUTCOME</dt><dd>A standalone Android build with background audio and a queue that survives app restarts.</dd></div>
+                </dl>
+                <p class="metrics mono"><span>BACKGROUND AUDIO</span><span>MMKV PERSISTENCE</span><span>TYPESCRIPT</span></p>
+                <p class="spread-links mono">
+                  <a href="https://github.com/MangoKrish/music-player-rn" target="_blank" rel="noopener noreferrer">GITHUB ↗</a>
+                </p>
+              </div>
+            </div>
+          </details>
+        </li>
+
+        </ol>
+    </section>
+
+    <!-- ============ 003 CAPABILITIES ============ -->
+    <section class="section" id="capabilities" data-folio="003 / 006 — CAPABILITIES">
+      <div class="kicker mono"><span>003 — CAPABILITIES</span><span>03 / 06</span></div>
+      <h2 class="headline reveal">Tools of the <em>trade.</em></h2>
+      <p class="section-note mono rise">COUNTS ARE LIVE — SELECT A SKILL TO SEE IT IN THE INDEX ABOVE.</p>
+
+      <div class="skills-grid">
+        <div class="skill-group rise">
+          <h3 class="skill-group-title mono">LANGUAGES</h3>
+          <ul class="skill-list">
+            <li><button type="button" class="skill mono" data-skill="python">PYTHON</button></li>
+            <li><button type="button" class="skill mono" data-skill="javascript">JAVASCRIPT</button></li>
+            <li><button type="button" class="skill mono" data-skill="typescript">TYPESCRIPT</button></li>
+            <li><button type="button" class="skill mono" data-skill="csharp">C#</button></li>
+            <li><button type="button" class="skill mono" data-skill="kotlin">KOTLIN</button></li>
+            <li><button type="button" class="skill mono" data-skill="sql">SQL</button></li>
+            <li><span class="skill skill-plain mono">JAVA</span></li>
+            <li><span class="skill skill-plain mono">C</span></li>
+          </ul>
+        </div>
+        <div class="skill-group rise">
+          <h3 class="skill-group-title mono">FRAMEWORKS &amp; RUNTIMES</h3>
+          <ul class="skill-list">
+            <li><button type="button" class="skill mono" data-skill="react">REACT / NEXT.JS</button></li>
+            <li><button type="button" class="skill mono" data-skill="fastapi">FASTAPI</button></li>
+            <li><button type="button" class="skill mono" data-skill="node">NODE.JS</button></li>
+            <li><button type="button" class="skill mono" data-skill="unity">UNITY</button></li>
+            <li><button type="button" class="skill mono" data-skill="compose">JETPACK COMPOSE</button></li>
+            <li><button type="button" class="skill mono" data-skill="react-native">REACT NATIVE</button></li>
+            <li><button type="button" class="skill mono" data-skill="tailwind">TAILWIND CSS</button></li>
+            <li><button type="button" class="skill mono" data-skill="threejs">THREE.JS</button></li>
+          </ul>
+        </div>
+        <div class="skill-group rise">
+          <h3 class="skill-group-title mono">AI &amp; SYSTEMS</h3>
+          <ul class="skill-list">
+            <li><button type="button" class="skill mono" data-skill="llm">LLM ORCHESTRATION</button></li>
+            <li><button type="button" class="skill mono" data-skill="embeddings">SEMANTIC EMBEDDINGS</button></li>
+            <li><button type="button" class="skill mono" data-skill="gemini">GEMINI API</button></li>
+            <li><button type="button" class="skill mono" data-skill="pwa">PWA / SERVICE WORKERS</button></li>
+            <li><button type="button" class="skill mono" data-skill="sse">REALTIME (SSE)</button></li>
+            <li><span class="skill skill-plain mono">LINUX &amp; SELF-HOSTING</span></li>
+            <li><span class="skill skill-plain mono">ARDUINO</span></li>
+            <li><span class="skill skill-plain mono">GOOGLE CLOUD</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 004 EXPERIENCE ============ -->
+    <section class="section" id="experience" data-folio="004 / 006 — THE RECORD">
+      <div class="kicker mono"><span>004 — THE RECORD</span><span>04 / 06</span></div>
+      <h2 class="headline reveal">The record so <em>far.</em></h2>
+
+      <ol class="ledger">
+        <li class="ledger-row rise">
+          <span class="ledger-when mono">2025–2029</span>
+          <div class="ledger-what">
+            <h3>McMaster University — BASc Computer Science (Co-op)</h3>
+            <p>Hamilton, Ontario. Coursework across Python, computational thinking, software development, C &amp; Linux, linear algebra, and discrete math.</p>
+          </div>
+          <span class="ledger-tag mono">EDUCATION</span>
+        </li>
+        <li class="ledger-row rise">
+          <span class="ledger-when mono">JUN–JUL 2026</span>
+          <div class="ledger-what">
+            <h3>MentorMatch — Product Engineering (two-person team)</h3>
+            <p>Designed and shipped the mentor-matching subsystem end-to-end on a live mentorship platform, then led a verified zero-behavior-change refactor and a WCAG-AA redesign of the portal and marketing site.</p>
+          </div>
+          <span class="ledger-tag mono">PRODUCT</span>
+        </li>
+        <li class="ledger-row rise">
+          <span class="ledger-when mono">MAY 2022</span>
+          <div class="ledger-what">
+            <h3>SysIdea Lab, IIT Gandhinagar — Robotics Research Intern</h3>
+            <p>Prototyped robotic components with 3D CAD, laser cutting, and 3D printing; assisted experimentation, debugging, and performance analysis at the hardware–software boundary.</p>
+          </div>
+          <span class="ledger-tag mono">RESEARCH</span>
+        </li>
+        <li class="ledger-row rise">
+          <span class="ledger-when mono">2024</span>
+          <div class="ledger-what">
+            <h3>House Captain — Student Council, JNS</h3>
+            <p>Led the house to the Sports, Cultural, and overall House trophies in a single year — the first time in a decade.</p>
+          </div>
+          <span class="ledger-tag mono">LEADERSHIP</span>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ 005 OFF HOURS ============ -->
+    <section class="section" id="offhours" data-folio="005 / 006 — OFF HOURS">
+      <div class="kicker mono"><span>005 — OFF HOURS</span><span>05 / 06</span></div>
+      <h2 class="headline reveal">Away from the <em>keyboard.</em></h2>
+
+      <div class="offhours-grid">
+        <div class="hobby hobby-chess rise">
+          <div class="chess-wrap">
+            <div class="chessboard" id="chessboard" aria-label="Live correspondence chessboard"></div>
+            <p class="chess-status mono" id="chessStatus" aria-live="polite"></p>
+            <p class="chess-moves mono" id="chessMoves"></p>
+            <p class="fig-caption mono" id="chessFig">FIG. 11 — THE ITALIAN GAME, THREE MOVES IN</p>
+          </div>
+          <div class="hobby-text">
+            <h3 class="mono">♞ CHESS</h3>
+            <p>FIDE-rated player. This board is live: make a move as White and it lands on my desk — I reply to every game. House rules: no castling, no en passant, capture the king to win.</p>
+            <p class="chess-links">
+              <a class="mono hobby-link" href="https://ratings.fide.com/profile/547078332" target="_blank" rel="noopener noreferrer">FIDE ↗</a>
+              <a class="mono hobby-link" href="https://www.chess.ca/en/ratings/p/?id=202654" target="_blank" rel="noopener noreferrer">CFC ↗</a>
+              <button type="button" class="mono chess-reset" id="chessReset" hidden>NEW GAME</button>
+            </p>
+          </div>
+        </div>
+        <div class="hobby rise">
+          <h3 class="mono">🏸 BADMINTON</h3>
+          <p>Fast rallies, faster footwork — the other kind of reaction time.</p>
+        </div>
+        <div class="hobby rise">
+          <h3 class="mono">♪ MUSIC</h3>
+          <p>Always playing something — usually while debugging.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ AVAILABILITY STRIP ============ -->
+    <p class="avail-strip mono" role="note">OPEN TO SOFTWARE · ROBOTICS · NLP CO-OP ROLES</p>
+
+    <!-- ============ 006 CONTACT ============ -->
+    <section class="section section-contact" id="contact" data-folio="006 / 006 — CONTACT">
+      <div class="kicker mono"><span>006 — CONTACT</span><span>06 / 06</span></div>
+      <h2 class="headline reveal">Let's <em>talk.</em></h2>
+
+      <p class="contact-lede rise">I'm actively looking for co-op and internship opportunities in software engineering, robotics, and NLP. If your team ships, I'd love to hear from you.</p>
+
+      <div class="contact-email rise">
+        <a class="email-big" href="mailto:sirigana@mcmaster.ca">sirigana@mcmaster.ca</a>
+        <button class="copy-email mono" id="copyEmail" type="button" data-email="sirigana@mcmaster.ca">COPY</button>
+        <span class="visually-hidden" id="copyStatus" role="status"></span>
+      </div>
+
+      <ul class="contact-links mono rise">
+        <li><a href="https://www.linkedin.com/in/akshay-krishna-sirigana-1b718a380/" target="_blank" rel="noopener noreferrer">LINKEDIN ↗</a></li>
+        <li><a href="https://github.com/MangoKrish" target="_blank" rel="noopener noreferrer">GITHUB ↗</a></li>
+        <li><a href="Resume_Krish.pdf" target="_blank" rel="noopener noreferrer">RESUME (PDF) ↗</a></li>
+      </ul>
+      <p class="contact-signoff">— Akshay</p>
+    </section>
+
+  </main>
+
+  <!-- ============ COLOPHON ============ -->
+  <footer class="colophon mono">
+    <div class="colophon-grid">
+      <p>SET IN ARCHIVO, FRAUNCES &amp; SPLINE SANS MONO.</p>
+      <p>HAND-BUILT — VANILLA HTML / CSS / JS. NO FRAMEWORKS. NO BUILD STEP. NO THIRD-PARTY TRACKERS — ANONYMOUS FIRST-PARTY STATS ONLY.</p>
+      <p>© 2026 AKSHAY KRISHNA SIRIGANA — HAMILTON, ONTARIO. ISSUE 01.</p>
     </div>
-
-  </div><!-- /decker-window -->
+  </footer>
 
   <script src="script.js"></script>
 </body>
